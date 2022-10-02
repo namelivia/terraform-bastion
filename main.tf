@@ -4,7 +4,7 @@ resource "aws_lightsail_key_pair" "deployer" {
 
 }
 
-resource "aws_lightsail_instance" "lightsail_instance" {
+resource "aws_lightsail_instance" "bastion_instance" {
   name = "${var.instance_name}"
   availability_zone = "eu-west-3a"
   key_pair_name = "${var.instance_name}-key"
